@@ -1,7 +1,7 @@
 CXX			=	c++
 CXXFLAGS	=	-Wall -Werror -Wextra -std=c++98 -g
-SRC			=	main.cpp
-NAME		=	brain
+SRC			=	$(wildcard *.cpp)
+NAME		=	weapon
 
 all: $(NAME)
 
