@@ -1,12 +1,8 @@
 #include "Zombie.hpp"
-#include <strings.h>
-#include <sstream>
-
-Zombie* zombieHorde( int N, std::string name );
 
 int main(int argc, char **argv)
 {
-	Zombie*		obj;
+	Zombie		*obj;
 	int			num;
 	std::string	name;
 
@@ -16,6 +12,8 @@ int main(int argc, char **argv)
 		ss >> num;
 		name = argv[2];
 		obj = zombieHorde(num, name);
+		for (int i = 0; i < num; i++)
+			obj[i].announce();
 		delete[] obj;
 	}
 	return 0;
