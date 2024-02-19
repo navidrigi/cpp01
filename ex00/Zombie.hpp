@@ -10,8 +10,9 @@ class Zombie
 		~Zombie();
 		void	announce(void);
 		void	SetName(std::string str);
-		// Zombie	*newZombie( std::string name );
-		// void	randomChump( std::string name );
 	private:
 		std::string	name;
 };
+
+Zombie	*newZombie( std::string name );
+void	randomChump( std::string name );

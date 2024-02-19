@@ -1,9 +1,6 @@
 CXX			=	c++
 CXXFLAGS	=	-Wall -Werror -Wextra -std=c++98
-SRC			=	main.cpp \
-				Zombie.cpp \
-				newZombie.cpp \
-				randomChump.cpp
+SRC			=	$(wildcard *.cpp)
 NAME		=	zombie
 
 all: $(NAME)

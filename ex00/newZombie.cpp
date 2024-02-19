@@ -6,6 +6,5 @@ Zombie	*newZombie( std::string name )
 
 	zombie = new Zombie();
 	zombie->SetName(name);
-	zombie->announce();
 	return zombie;
 }
