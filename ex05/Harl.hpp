@@ -9,6 +9,7 @@ class Harl
 		Harl();
 		~Harl();
 		void complain( std::string level );
+		void (Harl::*ptrToPrivateFunctions[4])();
 	private:
 		void	debug( void );
 		void	info( void );

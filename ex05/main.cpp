@@ -4,5 +4,6 @@ int main()
 {
 	Harl	obj;
 
-	obj.complain("hi");
+	obj.complain("");
+	return 0;
 }
