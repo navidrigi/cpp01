@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include <sstream>
+#include <cstdlib>
 
 class Zombie
 {
@@ -9,9 +10,9 @@ class Zombie
 		Zombie();
 		~Zombie();
 		void	announce(void);
-		void	SetName(std::string str);
+		void	SetName(std::string name);
 	private:
-		std::string	name;
+		std::string	name_;
 };
 
 Zombie	*zombieHorde( int N, std::string name );

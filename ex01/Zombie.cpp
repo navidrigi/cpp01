@@ -8,19 +8,19 @@ Zombie::Zombie()
 
 Zombie::~Zombie()
 {
-	std::cout << name
+	std::cout << name_
 			  << " is gone..."
 			  << std::endl;
 }
 
 void	Zombie::announce(void)
 {
-	std::cout << name
+	std::cout << name_
 			  << ": BraiiiiiiinnnzzzZ..."
 			  << std::endl;
 }
 
-void	Zombie::SetName(std::string str)
+void	Zombie::SetName(std::string name)
 {
-	name = str;
+	name_ = name;
 }
