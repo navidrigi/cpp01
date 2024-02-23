@@ -26,6 +26,11 @@ int main(int argc, char **argv)
 		}
 		file2.open(replace.c_str());
 		std::string s1 = argv[2];
+		if (s1.length() == 0)
+		{
+			std::cout << "oldString cannot be empty" << std::endl;
+			return (1);
+		}
 		std::string s2 = argv[3];
 		size_t s1_len = s1.size();
 		while (std::getline(file1, read))
