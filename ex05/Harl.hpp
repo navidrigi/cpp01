@@ -16,3 +16,5 @@ class Harl
 		void	warning( void );
 		void	error( void );
 };
+
+int	findIndex(std::string level, std::string array[], int size);
