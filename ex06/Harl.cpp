@@ -1,6 +1,16 @@
 #include "Harl.hpp"
 
-typedef	void	(Harl::*ptr)();
+Harl::Harl()
+{
+	ptrToPrivateFunctions[0] = &Harl::debug;
+	ptrToPrivateFunctions[1] = &Harl::info;
+	ptrToPrivateFunctions[2] = &Harl::warning;
+	ptrToPrivateFunctions[3] = &Harl::error;
+}
+
+Harl::~Harl()
+{
+}
 
 void	Harl::complain( std::string level )
 {
@@ -13,19 +23,10 @@ void	Harl::complain( std::string level )
 	{
 		case(0):
 			(obj.*(ptrToPrivateFunctions[0]))();
-			(obj.*(ptrToPrivateFunctions[1]))();
-			(obj.*(ptrToPrivateFunctions[2]))();
-			(obj.*(ptrToPrivateFunctions[3]))();
-			break;
 		case(1):
 			(obj.*(ptrToPrivateFunctions[1]))();
-			(obj.*(ptrToPrivateFunctions[2]))();
-			(obj.*(ptrToPrivateFunctions[3]))();
-			break;
 		case(2):
 			(obj.*(ptrToPrivateFunctions[2]))();
-			(obj.*(ptrToPrivateFunctions[3]))();
-			break;
 		case(3):
 			(obj.*(ptrToPrivateFunctions[3]))();
 			break;
@@ -96,14 +97,3 @@ void	Harl::error( void )
 			  << std::endl;
 }
 
-Harl::Harl()
-{
-	ptrToPrivateFunctions[0] = &Harl::debug;
-	ptrToPrivateFunctions[1] = &Harl::info;
-	ptrToPrivateFunctions[2] = &Harl::warning;
-	ptrToPrivateFunctions[3] = &Harl::error;
-}
-
-Harl::~Harl()
-{
-}
